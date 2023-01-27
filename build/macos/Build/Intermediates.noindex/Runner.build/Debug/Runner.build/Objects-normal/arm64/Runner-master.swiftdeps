@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "fd37d4fd9b6b97920211acbec89437ba8c57c9056fc428024f7432aad9090e74"
+build_start_time: [1674778185, 556723117]
+build_end_time: [1674778190, 292301177]
+inputs:
+  "/Users/rizwan/Documents/GitHub/chatgpt/chatgpt-using-flutter/macos/Flutter/GeneratedPluginRegistrant.swift": [1674778166, 423421621]
+  "/Users/rizwan/Documents/GitHub/chatgpt/chatgpt-using-flutter/macos/Runner/AppDelegate.swift": [1674510523, 466470003]
+  "/Users/rizwan/Documents/GitHub/chatgpt/chatgpt-using-flutter/macos/Runner/MainFlutterWindow.swift": [1674510523, 469140768]

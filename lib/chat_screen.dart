@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:chat_gpt_02/components/appbar.dart';
 import 'package:chat_gpt_02/components/chat_input_fields.dart';
 import 'package:chat_gpt_02/constants.dart';
@@ -10,16 +9,16 @@ import 'package:velocity_x/velocity_x.dart';
 import 'chatmessage.dart';
 import 'threedots.dart';
 
-class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+class Chat extends StatefulWidget {
+  const Chat({super.key});
 
   @override
-  State<ChatScreen> createState() => _ChatScreenState();
+  State<Chat> createState() => _ChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _ChatScreenState extends State<Chat> {
   final TextEditingController _controller = TextEditingController();
-  final List<ChatMessage> _messages = [];
+  final List<Message> _messages = [];
   ChatGPT? chatGPT;
   bool _isImageSearch = false;
 
@@ -41,11 +40,11 @@ class _ChatScreenState extends State<ChatScreen> {
     super.dispose();
   }
 
-  // Link for api - https://beta.openai.com/account/api-keys
+//for api - https://beta.openai.com/account/api-keys
 
   void _sendMessage() {
     if (_controller.text.isEmpty) return;
-    ChatMessage message = ChatMessage(
+    Message message = Message(
       text: _controller.text,
       sender: "user",
       isImage: false,
@@ -83,7 +82,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void insertNewData(String response, {bool isImage = false}) {
-    ChatMessage botMessage = ChatMessage(
+    Message botMessage = Message(
       text: response,
       sender: "bot",
       isImage: isImage,
