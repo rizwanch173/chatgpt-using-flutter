@@ -29,10 +29,12 @@ class _ChatScreenState extends State<Chat> {
   void initState() {
     super.initState();
     chatGPT = ChatGPT.instance.builder(
-      "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",
+      "key-here",
     );
   }
-
+  
+//for api - https://beta.openai.com/account/api-keys
+  
   @override
   void dispose() {
     chatGPT!.genImgClose();
@@ -40,7 +42,7 @@ class _ChatScreenState extends State<Chat> {
     super.dispose();
   }
 
-//for api - https://beta.openai.com/account/api-keys
+
 
   void _sendMessage() {
     if (_controller.text.isEmpty) return;
